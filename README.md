@@ -1,1 +1,1 @@
-# lista-telefonica
+## Frontend application with Angular.js
