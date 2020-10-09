@@ -1,1 +1,1 @@
-## Frontend application with Angular.js
+## Frontend aplication with Angular.js
