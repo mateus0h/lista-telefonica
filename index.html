@@ -21,6 +21,8 @@
 
   <script src="js/config/serialGeneratoConfig.js"></script>
   <script src="js/constant/configValue.js"></script>
+  <script src="js/filters/nameFilter.js"></script>
+  <script src="js/filters/ellipsisFilter.js"></script>
 </head>
 <body ng-controller="listaTelefonicaCtrl">
   <div class="jumbotron"> 
@@ -44,7 +46,7 @@
           <input type="checkbox" ng-model="contato.selecionado"/>
         </td>
         <td>{{contato.serial}}</td>
-        <td>{{contato.nome}}</td>
+        <td>{{contato.nome | name | ellipsis: 10}}</td>
         <td>{{contato.telefone}}</td>
         <td>{{contato.operadora.nome}}</td>
         <td>{{contato.data | date: 'dd/mm/yyyy HH:mm'}}</td>
