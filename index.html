@@ -7,6 +7,7 @@
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/ui.css"> 
 
   <script src="lib/angular.js"></script>
   <script src="lib/angularMessages.js"></script>
@@ -23,11 +24,17 @@
   <script src="js/constant/configValue.js"></script>
   <script src="js/filters/nameFilter.js"></script>
   <script src="js/filters/ellipsisFilter.js"></script>
+
+  <script src="js/directives/uiAlertDirective.js"></script>
 </head>
 <body ng-controller="listaTelefonicaCtrl">
   <div class="jumbotron"> 
     <h4>{{app}}</h4>
-    <div>{{message}}</div>   
+
+    <ui-alert title="Ops, aconteceu um problema">
+      {{error}}
+    </ui-alert>
+
     <input type="text" name="busca" ng-model="criterioDeBusca" placeholder="Oque você está buscando?" class="form-control">
     <table class="table">
       <tr>
